@@ -1,0 +1,28 @@
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteRule ^szukaj/(.*) search.php?what=$1 [L]
+RewriteRule ^szukaj(.*) search.php [L]
+RewriteRule ^gildia/(.*) guild.php?name=$1 [L]
+RewriteRule ^gracz/(.*) player.php?name=$1 [L]
+RewriteRule ^statystyki(.*)$ stats.php [L]
+RewriteRule ^bany(.*)$ bans.php [L]
+
+RewriteRule ^admin/home(.*) admin/dashboard.php [L]
+RewriteRule ^admin/zmienhaslo(.*) admin/dashboard.php?tab=change_password [L]
+RewriteRule ^admin/ustawienia(.*) admin/dashboard.php?tab=website [L]
+RewriteRule ^admin/wyloguj(.*) admin/logout.php [L]
+
+RewriteRule ^admin/strony/stworz(.*) admin/dashboard.php?tab=custom_pages/create [L]
+RewriteRule ^admin/strony/edycja/(.*) admin/dashboard.php?tab=custom_pages/edit&id=$1 [L]
+RewriteRule ^admin/strony(.*) admin/dashboard.php?tab=custom_pages [L]
+RewriteRule ^page/(.*) page.php?name=$1 [L]
+
+RewriteRule ^admin/konta/stworz(.*) admin/dashboard.php?tab=accounts/create [L]
+RewriteRule ^admin/konta(.*) admin/dashboard.php?tab=accounts [L]
+
+RewriteCond %{REQUEST_URI} ^/([^\.]+)/
+RewriteRule ^ - [E=SUBDIR:%1]
+ErrorDocument 404 /%{reqenv:SUBDIR}/application/pages/404.php
+ErrorDocument 403 /%{reqenv:SUBDIR}/application/pages/403.php
+ErrorDocument 500 /%{reqenv:SUBDIR}/application/pages/500.php
+</IfModule>
