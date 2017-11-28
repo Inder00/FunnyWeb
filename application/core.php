@@ -184,7 +184,50 @@ class CustomPages extends FunnyWeb {
 		return nl2br($text);
 	}
 }
+class FunnyNews extends FunnyWeb {
 
+	public function update($id,$column,$value){
+		$sql = "UPDATE funnyweb_news SET ".$column."=:value WHERE id=:id";
+      	$stmt = $this->db->prepare($sql);
+  		$stmt->bindValue(':id', $id, PDO::PARAM_STR);
+      	$stmt->bindValue(':value', $value, PDO::PARAM_STR);
+  		$stmt->execute();
+    }
+	public function insert($username,$title,$text,$img = ""){
+		$sql = "INSERT INTO `funnyweb_news` (`id`, `username`, `date`, `title`, `text`, `image`) VALUES (NULL, :username, '".time()."', :title, :text, :img);";
+		$stmt = $this->db->prepare($sql);
+  		$stmt->bindValue(':username', $username, PDO::PARAM_STR);
+      	$stmt->bindValue(':title', $title, PDO::PARAM_STR);
+		$stmt->bindValue(':text', $text, PDO::PARAM_STR);
+		$stmt->bindValue(':img', $img, PDO::PARAM_STR);
+  		$stmt->execute();
+	}
+	public function getById($name){
+		if(empty($name)){
+			return "not_found";
+		}
+		$stmt = $this->db->prepare("SELECT * FROM funnyweb_news WHERE id=:name");
+		$stmt->bindValue(':name', $name, PDO::PARAM_STR);
+		$stmt->execute();
+		$rows = $stmt->fetch(PDO::FETCH_ASSOC);
+		$num = count($rows);
+		if($num == 0){
+			return "not_found";
+		}
+		return $rows;
+	}
+	public function remove($id){
+		$sql = "DELETE FROM `funnyweb_news` WHERE id = :id;";
+		$stmt = $this->db->prepare($sql);
+  		$stmt->bindValue(':id', $id, PDO::PARAM_STR);
+  		$stmt->execute();
+	}
+	public function format($text){
+		return nl2br($text);
+	}
+}
+
+$news = new FunnyNews;
 $pages = new CustomPages;
 $core = new FunnyWeb;
 ?>

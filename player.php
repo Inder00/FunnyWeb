@@ -55,6 +55,11 @@ if(isset($_GET['name']) && !empty($_GET['name'])){
                                 STATYSTYKI
                             </a>
                         </li>
+						<li class="nav-item">
+							<a class="nav-link" href="<?php echo $core->webUrl.'aktualnosci'; ?>">
+								AKTUALNOŚCI
+							</a>
+						</li>
 												<?php
                         if($core->maxbans == true){
                           ?>

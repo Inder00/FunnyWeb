@@ -200,6 +200,7 @@ if(isset($_POST['submit'])){
         $db->query("CREATE TABLE `funnyweb_admins` ( `id` INT(11) NOT NULL AUTO_INCREMENT , `username` VARCHAR(32) NOT NULL , `password` VARCHAR(64) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;");
         $db->query("INSERT INTO `funnyweb_admins` (`id`, `username`, `password`) VALUES (NULL, '".$admin_username."', '".sha1(md5(base64_encode(str_rot13($admin_password))).md5(sha1(base64_encode($admin_password))))."');");
         $db->query("CREATE TABLE `funnyweb_pages` ( `id` INT(11) NOT NULL AUTO_INCREMENT , `name` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_polish_ci NOT NULL , `title` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_polish_ci NOT NULL , `text` TEXT CHARACTER SET utf8 COLLATE utf8_polish_ci NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;");
+        $db->query("CREATE TABLE `funnyweb_news` ( `id` INT(11) NOT NULL AUTO_INCREMENT , `username` VARCHAR(255) NOT NULL , `date` INT(255) NOT NULL , `title` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_polish_ci NOT NULL , `text` TEXT CHARACTER SET utf8 COLLATE utf8_polish_ci NOT NULL, `image` varchar(255) DEFAULT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;");
 
         $content = '<?php
 $dbPass="'.$dbpass.'";

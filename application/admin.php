@@ -103,6 +103,18 @@ class FunnyAdmin extends FunnyWeb {
         case "custom_pages":
           return include($this->root."/admin/tab/custom_pages.php");
           break;
+        case "news":
+            return include($this->root."/admin/tab/news.php");
+            break;
+        case "news/create":
+            return include($this->root."/admin/tab/news/create.php");
+            break;
+        case "news/edit":
+            if(isset($id) && !empty($id)){
+                $GLOBALS['id_podstrony'] = $id;
+                return include($this->root."/admin/tab/news/edit.php");
+                break;
+            }
         case "change_password":
           return include($this->root."/admin/tab/change_password.php");
           break;
@@ -131,7 +143,7 @@ class FunnyAdmin extends FunnyWeb {
     $stmt->bindValue(':value', $value, PDO::PARAM_STR);
 	$stmt->execute();
   }
-  
+
   public function register($username,$password){
       $sql = "INSERT INTO funnyweb_admins (`id`, `username`, `password`) VALUES (NULL, :username, :password);";
       $stmt = $this->db->prepare($sql);

@@ -21,7 +21,7 @@ $core->top();
                      <li><a href="<?php echo $core->webUrl; ?>admin/ustawienia">Ustawienia strony</a></li>
                      <li><a href="<?php echo $core->webUrl; ?>admin/strony">Własne podstrony</a></li>
                      <li><a href="<?php echo $core->webUrl; ?>admin/konta">Konta administracyjne</a></li>
-                     <li><a href="#">Newsy (wkrótce)</a></li>
+                     <li><a href="<?php echo $core->webUrl; ?>admin/aktualnosci">Aktualnosci</a></li>
                      <li><br /></li>
                      <li><a href="<?php echo $core->webUrl; ?>admin/zmienhaslo">Zmień hasło</a></li>
                      <li><a href="<?php echo $core->webUrl; ?>admin/wyloguj">Wyloguj</a></li>
@@ -101,7 +101,7 @@ $serverIp="'.$serverip.'";
 $webUrl="'.$core->webUrl.'";
 $background="'.$background.'";
 $logo="'.$logo.'";
-$favicon="'.$core->favicon.'";
+$favicon="'.$favicon.'";
 ?>';
             $fp = fopen($core->root."/conf_global.php","wb");
             fwrite($fp,$content);
@@ -221,6 +221,63 @@ $favicon="'.$core->favicon.'";
                 } else {
                     ?><script>$("#nie_usunieto").show();</script><?php
                 }
+            }
+        }
+    }
+
+    //TWORZENIE NEWSA
+    if(isset($_POST['tab']) && $_POST['tab'] == "news/create"){
+
+        if(isset($_POST['text']) && !empty($_POST['text'])
+        && isset($_POST['title']) && !empty($_POST['title'])){
+
+            $text = $_POST['text'];
+            $title = $_POST['title'];
+            $img = $_POST['image'];
+            $news->insert($admin->getUsername(),$title,$text,$img);
+            ?><script>$("#stworzono").show();setInterval(function(){location.href="<?php echo $core->webUrl; ?>admin/aktualnosci";},3000);</script><?php
+        } else {
+            ?><script>$("#pola").show();</script><?php
+        }
+    }
+
+    //EDYCJA NEWSA
+    if(isset($_POST['tab']) && $_POST['tab'] == "news/edit"){
+
+        if(isset($_POST['text']) && !empty($_POST['text'])
+        && isset($_POST['title']) && !empty($_POST['title'])
+        && isset($_POST['id']) && !empty($_POST['id'])){
+
+            $id = $_POST['id'];
+            $text = $_POST['text'];
+            $title = $_POST['title'];
+            $img = $_POST['image'];
+
+            $strona = $news->getById($id);
+            if(is_array($strona)){
+
+                $news->update($strona['id'],'text',$text);
+                $news->update($strona['id'],'title',$title);
+                $news->update($strona['id'],'image',$img);
+                ?><script>$("#zmieniono").show();setInterval(function(){location.href="<?php echo $core->webUrl; ?>admin/aktualnosci";},3000);</script><?php
+            } else {
+                ?><script>$("#pola").show();</script><?php
+            }
+
+        } else {
+            ?><script>$("#pola").show();</script><?php
+        }
+    }
+
+    //USUWANIE NEWSA
+    if(isset($_POST['tab']) && $_POST['tab'] == "news/delete"){
+        if(isset($_POST['id']) && !empty($_POST['id'])){
+
+            $id = $_POST['id'];
+            $istnieje = $news->getById($id);
+            if(is_array($istnieje)){
+                $news->remove($id);
+                ?><script>$("#usunieto").show();$("#<?php echo $id; ?>").hide();</script><?php
             }
         }
     }

@@ -6,6 +6,7 @@ RewriteRule ^gildia/(.*) guild.php?name=$1 [L]
 RewriteRule ^gracz/(.*) player.php?name=$1 [L]
 RewriteRule ^statystyki(.*)$ stats.php [L]
 RewriteRule ^bany(.*)$ bans.php [L]
+RewriteRule ^aktualnosci(.*)$ news.php [L]
 
 RewriteRule ^admin/home(.*) admin/dashboard.php [L]
 RewriteRule ^admin/zmienhaslo(.*) admin/dashboard.php?tab=change_password [L]
@@ -19,6 +20,10 @@ RewriteRule ^page/(.*) page.php?name=$1 [L]
 
 RewriteRule ^admin/konta/stworz(.*) admin/dashboard.php?tab=accounts/create [L]
 RewriteRule ^admin/konta(.*) admin/dashboard.php?tab=accounts [L]
+
+RewriteRule ^admin/aktualnosci/stworz(.*) admin/dashboard.php?tab=news/create [L]
+RewriteRule ^admin/aktualnosci/edycja/(.*) admin/dashboard.php?tab=news/edit&id=$1 [L]
+RewriteRule ^admin/aktualnosci(.*) admin/dashboard.php?tab=news [L]
 
 RewriteCond %{REQUEST_URI} ^/([^\.]+)/
 RewriteRule ^ - [E=SUBDIR:%1]
