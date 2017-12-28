@@ -1,5 +1,6 @@
 <?php
 require_once '../application/core.php';
+require_once '../application/payments.php';
 require_once '../application/admin.php';
 
 if($admin->isLogged() == false){
@@ -22,6 +23,7 @@ $core->top();
                      <li><a href="<?php echo $core->webUrl; ?>admin/strony">Własne podstrony</a></li>
                      <li><a href="<?php echo $core->webUrl; ?>admin/konta">Konta administracyjne</a></li>
                      <li><a href="<?php echo $core->webUrl; ?>admin/aktualnosci">Aktualnosci</a></li>
+                     <li><a href="<?php echo $core->webUrl; ?>admin/sklep">Sklep</a></li>
                      <li><br /></li>
                      <li><a href="<?php echo $core->webUrl; ?>admin/zmienhaslo">Zmień hasło</a></li>
                      <li><a href="<?php echo $core->webUrl; ?>admin/wyloguj">Wyloguj</a></li>
@@ -277,6 +279,88 @@ $favicon="'.$favicon.'";
             $istnieje = $news->getById($id);
             if(is_array($istnieje)){
                 $news->remove($id);
+                ?><script>$("#usunieto").show();$("#<?php echo $id; ?>").hide();</script><?php
+            }
+        }
+    }
+
+    //EDYCJA USŁUGI
+    if(isset($_POST['tab']) && $_POST['tab'] == "shop/edit"){
+
+        if(isset($_POST['name']) && !empty($_POST['name'])
+        && isset($_POST['number']) && !empty($_POST['number'])
+        && isset($_POST['content_sms']) && !empty($_POST['content_sms'])
+        && isset($_POST['service_id']) && !empty($_POST['service_id'])
+        && isset($_POST['commands']) && !empty($_POST['commands'])
+        && isset($_POST['image']) && !empty($_POST['image'])
+        && isset($_POST['desc']) && !empty($_POST['desc'])
+        && isset($_POST['id']) && !empty($_POST['id'])
+    ){
+
+            $id = $_POST['id'];
+            $name = $_POST['name'];
+            $number = $_POST['number'];
+            $img = $_POST['image'];
+            $content_sms = $_POST['content_sms'];
+            $service_id = $_POST['service_id'];
+            $commands = $_POST['commands'];
+            $desc = $_POST['desc'];
+
+            $usluga = $payments->getById($id);
+            if(is_array($usluga)){
+
+                $payments->update($usluga['id'],'name',$name);
+                $payments->update($usluga['id'],'number',$number);
+                $payments->update($usluga['id'],'image',$img);
+                $payments->update($usluga['id'],'content_sms',$content_sms);
+                $payments->update($usluga['id'],'service_id',$service_id);
+                $payments->update($usluga['id'],'commands',$commands);
+                $payments->update($usluga['id'],'description',$desc);
+                ?><script>$("#zmieniono").show();setInterval(function(){location.href="<?php echo $core->webUrl; ?>admin/sklep";},3000);</script><?php
+
+            } else {
+                ?><script>$("#pola").show();</script><?php
+            }
+        } else {
+            ?><script>$("#pola").show();</script><?php
+        }
+    }
+
+    //TWORZENIE USŁUGI
+    if(isset($_POST['tab']) && $_POST['tab'] == "shop/create"){
+
+        if(isset($_POST['name']) && !empty($_POST['name'])
+        && isset($_POST['number']) && !empty($_POST['number'])
+        && isset($_POST['content_sms']) && !empty($_POST['content_sms'])
+        && isset($_POST['service_id']) && !empty($_POST['service_id'])
+        && isset($_POST['commands']) && !empty($_POST['commands'])
+        && isset($_POST['image']) && !empty($_POST['image'])
+        && isset($_POST['desc']) && !empty($_POST['desc'])
+    ){
+
+            $name = $_POST['name'];
+            $number = $_POST['number'];
+            $img = $_POST['image'];
+            $content_sms = $_POST['content_sms'];
+            $service_id = $_POST['service_id'];
+            $commands = $_POST['commands'];
+            $desc = $_POST['desc'];
+
+            $payments->insert($name,$desc,$number,$content_sms,$commands,$img,$service_id);
+            ?><script>$("#stworzono").show();setInterval(function(){location.href="<?php echo $core->webUrl; ?>admin/sklep";},3000);</script><?php
+        } else {
+            ?><script>$("#pola").show();</script><?php
+        }
+    }
+
+    //USUWANIE USŁUGI
+    if(isset($_POST['tab']) && $_POST['tab'] == "shop/delete"){
+        if(isset($_POST['id']) && !empty($_POST['id'])){
+
+            $id = $_POST['id'];
+            $istnieje = $payments->getById($id);
+            if(is_array($istnieje)){
+                $payments->remove($id);
                 ?><script>$("#usunieto").show();$("#<?php echo $id; ?>").hide();</script><?php
             }
         }

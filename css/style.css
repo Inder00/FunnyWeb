@@ -3510,3 +3510,6 @@ Timeline
   top: 10px;
   font-weight: 400;
   color: #374054; }
+.hidden {
+    display: none;
+}

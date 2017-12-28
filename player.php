@@ -70,6 +70,16 @@ if(isset($_GET['name']) && !empty($_GET['name'])){
                           </li>
                           <?php
                         }
+						if($core->shop == true){
+						  ?>
+						  <li class="nav-item">
+								<a class="nav-link" href="<?php echo $core->webUrl.'sklep'; ?>">
+									SKLEP
+								</a>
+						  </li>
+						  <?php
+						}
+						
 						$sql = "SELECT * FROM funnyweb_pages ORDER BY id DESC";
 						$stmt = $core->db->prepare($sql);
 						$stmt->execute();

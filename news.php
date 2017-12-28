@@ -42,7 +42,7 @@ $core->top();
             <?php
             }
             if($num == 0){
-                ?><h3 class="text-center"><i class="fa fa-search"></i> Nie znaleziono redordów w bazie danych</h3><?php
+                ?><h3 class="text-center"><i class="fa fa-search"></i> Nie znaleziono rekordów w bazie danych</h3><?php
             }
             ?>
         </div>

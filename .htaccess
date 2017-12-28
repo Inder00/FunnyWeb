@@ -7,6 +7,8 @@ RewriteRule ^gracz/(.*) player.php?name=$1 [L]
 RewriteRule ^statystyki(.*)$ stats.php [L]
 RewriteRule ^bany(.*)$ bans.php [L]
 RewriteRule ^aktualnosci(.*)$ news.php [L]
+RewriteRule ^sklep$ shop.php [L]
+RewriteRule ^sklep/(.*)$ usluga.php?id=$1 [L]
 
 RewriteRule ^admin/home(.*) admin/dashboard.php [L]
 RewriteRule ^admin/zmienhaslo(.*) admin/dashboard.php?tab=change_password [L]
@@ -15,15 +17,19 @@ RewriteRule ^admin/wyloguj(.*) admin/logout.php [L]
 
 RewriteRule ^admin/strony/stworz(.*) admin/dashboard.php?tab=custom_pages/create [L]
 RewriteRule ^admin/strony/edycja/(.*) admin/dashboard.php?tab=custom_pages/edit&id=$1 [L]
-RewriteRule ^admin/strony(.*) admin/dashboard.php?tab=custom_pages [L]
+RewriteRule ^admin/strony$ admin/dashboard.php?tab=custom_pages [L]
 RewriteRule ^page/(.*) page.php?name=$1 [L]
 
 RewriteRule ^admin/konta/stworz(.*) admin/dashboard.php?tab=accounts/create [L]
-RewriteRule ^admin/konta(.*) admin/dashboard.php?tab=accounts [L]
+RewriteRule ^admin/konta$ admin/dashboard.php?tab=accounts [L]
 
 RewriteRule ^admin/aktualnosci/stworz(.*) admin/dashboard.php?tab=news/create [L]
 RewriteRule ^admin/aktualnosci/edycja/(.*) admin/dashboard.php?tab=news/edit&id=$1 [L]
-RewriteRule ^admin/aktualnosci(.*) admin/dashboard.php?tab=news [L]
+RewriteRule ^admin/aktualnosci$ admin/dashboard.php?tab=news [L]
+
+RewriteRule ^admin/sklep$ admin/dashboard.php?tab=shop [L]
+RewriteRule ^admin/sklep/stworz(.*) admin/dashboard.php?tab=shop/create [L]
+RewriteRule ^admin/sklep/edycja/(.*) admin/dashboard.php?tab=shop/edit&id=$1 [L]
 
 RewriteCond %{REQUEST_URI} ^/([^\.]+)/
 RewriteRule ^ - [E=SUBDIR:%1]

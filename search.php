@@ -2,9 +2,9 @@
 require_once('application/core.php');
 $core->top();
 ?>
-		<div class="container mb50">
-			<div class="title-heading1 mb30">
-				<h3>WYSZUKIWANIE</h3>                       
+		<div class="container">
+			<div class="title-heading1">
+				<h3>WYSZUKIWANIE</h3>
             </div>
 <?php
 if(isset($_GET['what']) && !empty($_GET['what'])){
@@ -19,18 +19,21 @@ if(isset($_GET['what']) && !empty($_GET['what'])){
 		}
 	} else {
 		?>
-				<div id="not_found" class="alert alert-danger alert-dismissible fade show" role="alert">
-					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-					</button>
-					<strong>Nie znaleziono!</strong> Spróbuj ponownie za chwile.
-				</div>
+				<div class="alert alert-warning alert-danger fade show alert-fix fix-bottom" role="alert">
+            		<div class="container">
+                		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    		<span aria-hidden="true">×</span>
+                		</button>
+                		<strong>Błąd: Nie znaleziono frazy!</strong> Nie znaleziono frazy szukanej przez Ciebie. Spróbuj ponownie, sprawdz zbieżność każdej litery oraz liczby!
+            		</div>
+        		</div>
 		<?php
 	}
 }
 
-?>
-			<div class="row mb30 no-margin">
+
+?>		<div class="col-md-12">
+			<div class="row mb50 no-margin">
                 <div class="input-group input-group-lg">
                     <input id="wh" class="form-control required" placeholder="Wyszukaj swój profil lub gildie">
                     <span class="input-group-btn">
@@ -39,6 +42,7 @@ if(isset($_GET['what']) && !empty($_GET['what'])){
                 </div>
             </div>
         </div>
+	</div>
 <?php
 $core->footer();
 ?>

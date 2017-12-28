@@ -67,6 +67,16 @@ if(isset($_GET['name']) && !empty($_GET['name'])){
                           </li>
                           <?php
                         }
+						if($core->shop == true){
+						  ?>
+						  <li class="nav-item">
+								<a class="nav-link" href="<?php echo $core->webUrl.'sklep'; ?>">
+									SKLEP
+								</a>
+						  </li>
+						  <?php
+						}
+
 						$sql = "SELECT * FROM funnyweb_pages ORDER BY id DESC";
 						$stmt = $core->db->prepare($sql);
 						$stmt->execute();
@@ -187,7 +197,7 @@ if(isset($_GET['name']) && !empty($_GET['name'])){
 				<div class="col-md-3 text-center gracz">
 					<a href="<?php echo $core->webUrl.'gracz/'.$gracz; ?>">
 						<h3><span><img src="https://crafatar.com/avatars/<?php echo $gracz; ?>?size=64"></span></h3>
-						<span><?php echo $gracz; ?></span>
+						<strong style="font-size:14px;"><?php echo $gracz; ?></strong>
 					</a>
 				</div>
 				<?php

@@ -127,6 +127,18 @@ class FunnyAdmin extends FunnyWeb {
         case "accounts/create":
             return include($this->root."/admin/tab/accounts/create.php");
             break;
+        case "shop":
+            return include($this->root."/admin/tab/shop.php");
+            break;
+        case "shop/create":
+            return include($this->root."/admin/tab/shop/create.php");
+            break;
+        case "shop/edit":
+            if(isset($id) && !empty($id)){
+                $GLOBALS['id_uslugi'] = $id;
+                return include($this->root."/admin/tab/shop/edit.php");
+                break;
+            }
         default:
           return include($this->root."/admin/tab/index.php");
           break;
