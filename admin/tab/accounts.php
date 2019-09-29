@@ -42,7 +42,7 @@ global $user;
                                 ?>
                                 <tr id="<?php echo $user['id']; ?>">
                                     <th scope="row"><?php echo $user['id']; ?></th>
-                                    <td><img src="https://crafatar.com/avatars/<?php echo $user['username']; ?>?size=23"> <?php echo $user['username']; ?></td>
+                                    <td><img src="https://minotar.net/avatar/<?php echo $user['username']; ?>/23"> <?php echo $user['username']; ?></td>
                                     <td><?php echo "***********"; ?></td>
                                     <td><button type="button" class="btn btn-danger btn-sm mb5" data-toggle="modal" data-target="#usun<?php echo $user['id']; ?>"><i class="fa fa-trash-o"></i> Usuń</button></td>
                                 </tr>

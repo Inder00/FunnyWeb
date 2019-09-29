@@ -39,7 +39,7 @@ global $user;
                                 <tr id="<?php echo $strona['id']; ?>">
                                     <th scope="row"><?php echo $strona['id']; ?></th>
                                     <td><?php echo date("d.m.Y H:i", $strona['date']) ?></td>
-                                    <th scope="row"><img src="https://crafatar.com/avatars/<?php echo $strona['username']; ?>?size=23"> <?php echo $strona['username']; ?></th>
+                                    <th scope="row"><img src="https://minotar.net/avatar/<?php echo $strona['username']; ?>/23"> <?php echo $strona['username']; ?></th>
                                     <td><?php echo $strona['title']; ?></td>
                                     <td><button type="button" class="btn btn-info btn-sm mb5" data-toggle="modal" data-target="#zobacz<?php echo $strona['id']; ?>"><i class="fa fa-envelope-o"></i> Podgląd</button></td>
                                     <td><a href="<?php echo $core->webUrl; ?>admin/aktualnosci/edycja/<?php echo $strona['id']; ?>"><button type="button" class="btn btn-primary btn-sm mb5"><i class="fa fa-edit"></i> Edytuj</button></a> <button type="button" class="btn btn-danger btn-sm mb5" data-toggle="modal" data-target="#usun<?php echo $strona['id']; ?>"><i class="fa fa-trash-o"></i> Usuń</button></td>
