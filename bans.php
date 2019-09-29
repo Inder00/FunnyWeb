@@ -46,7 +46,7 @@ $core->top();
 
 									?>
 									<tr>
-											<th class="text-nowrap gracz" scope="row"><a href="<?php echo $core->webUrl; ?>gracz/<?php echo $ban['name']; ?>"><img src="https://crafatar.com/avatars/<?php echo $ban['name']; ?>?size=25"> <?php echo $ban['name']; ?></a></th>
+											<th class="text-nowrap gracz" scope="row"><a href="<?php echo $core->webUrl; ?>gracz/<?php echo $ban['name']; ?>"><img src="https://minotar.net/avatar/<?php echo $ban['name']; ?>?size=25"> <?php echo $ban['name']; ?></a></th>
 											<td><?php echo date("m.d.Y, H:i:s", substr($ban['time'], 0, -3)); ?></td>
 											<td>
 												<?php
@@ -58,7 +58,7 @@ $core->top();
 												?>
 											</td>
 											<td><?php echo $ban['reason']; ?></td>
-											<th class="gracz" scope="row"><a href="<?php echo $core->webUrl; ?>gracz/<?php echo $ban['banner']; ?>"><img src="https://crafatar.com/avatars/<?php echo $ban['banner']; ?>?size=25"> <?php echo $ban['banner']; ?></a></th>
+											<th class="gracz" scope="row"><a href="<?php echo $core->webUrl; ?>gracz/<?php echo $ban['banner']; ?>"><img src="https://minotar.net/avatar/<?php echo $ban['banner']; ?>?size=25"> <?php echo $ban['banner']; ?></a></th>
 									</tr>
 									<?php
 

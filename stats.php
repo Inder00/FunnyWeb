@@ -31,7 +31,7 @@ $core->top();
 									<th style="width:25px;" class="black-text" scope="row"><?php echo $id; ?></th>
 									<td class="gracz">
 										<a class="black-text" href="<?php echo $core->webUrl; ?>gracz/<?php echo $gracz['name']; ?>">
-											<img src="https://crafatar.com/avatars/<?php echo $gracz['name']; ?>?size=25">
+											<img src="https://minotar.net/avatar/<?php echo $gracz['name']; ?>?size=25">
 											<p class="black-text"><?php echo $gracz['name']; ?></p>
 										</a>
 									</td>
@@ -52,7 +52,7 @@ $core->top();
 									<th style="width:25px;" class="black-text" scope="row"><?php echo $i; ?></th>
 									<td class="gracz">
 										<a class="black-text" href="#">
-											<img src="https://crafatar.com/avatars/Steve?size=25">
+											<img src="https://minotar.net/avatar/Steve">
 											<p class="black-text">Brak</p>
 										</a>
 									</td>
@@ -87,7 +87,7 @@ $core->top();
 									<th style="width:25px;" class="black-text" scope="row"><?php echo $id2; ?></th>
 									<td class="gracz">
 										<a class="black-text" href="<?php echo $core->webUrl; ?>gildia/<?php echo $gildia['tag']; ?>">
-											<img src="https://crafatar.com/avatars/<?php echo $gildia['owner']; ?>?size=25">
+											<img src="https://minotar.net/avatar/<?php echo $gildia['owner']; ?>?size=25">
 											<p class="black-text">[<?php echo $gildia['tag']; ?>] <?php echo $gildia['name']; ?></p>
 										</a>
 									</td>
@@ -108,7 +108,7 @@ $core->top();
 									<th style="width:25px;" class="black-text" scope="row"><?php echo $i; ?></th>
 									<td class="gracz">
 										<a class="black-text" href="#">
-											<img src="https://crafatar.com/avatars/Steve?size=25">
+											<img src="https://minotar.net/avatar/Steve">
 											<p class="black-text">Brak</p>
 										</a>
 									</td>
