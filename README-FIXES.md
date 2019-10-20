@@ -1,6 +1,6 @@
 # Wersja z poprawkami zawiera:
 
-## Wersja 2.0 (moja)
+## Wersja 2.0 (moja) AKTUALNA
   - dodanie dynmapy
   - naprawienie główek na stronie głównej (cz. 2)
   - przerobienie starego timelina na mojego (nowego)
