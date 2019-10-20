@@ -8,7 +8,7 @@ $core->top();
 				<h3>MAPA SERWERA</h3>
             </div>
 
-			<iframe src="OTWORZ PLIK CONF_GLOBAL.php I EDYTUJ TE LINIJKE" width="700" height="520" frameborder="0" marginheight="0" marginwidth="0" style="position:relative;Left:5.5cm;">Ustaw link w konfiguracji (jeżeli nie jesteś administratorem, możliwe że twoja przeglądarka nie działa prawidłowo)</iframe>
+			<iframe src="OTWORZ PLIK index.php I EDYTUJ TE LINIJKE" width="700" height="520" frameborder="0" marginheight="0" marginwidth="0" style="position:relative;Left:5.5cm;">Ustaw link w konfiguracji (jeżeli nie jesteś administratorem, możliwe że twoja przeglądarka nie działa prawidłowo)</iframe>
 			<div class="title-heading1 mb30">
 				<br> <br> <br>
 				
