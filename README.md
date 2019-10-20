@@ -1,8 +1,14 @@
 # FunnyWeb
 Strona www, służąca do wyświetlania informacji z pluginu FunnyGuilds i nie tylko...
 
+## Czym różni się mój fork od oryginału?
+Moja wersja zawiera:
+- naprawione główki graczy (na wszystkich stronach)
+- naprawiony tekst na stronie głównej
+- wyświetlanie Dynmapy na stronie głównej
+
 ## Naprawiona wersja
-Informacje o fixach: [KLIK](https://github.com/ProcesorDEV/FunnyWeb-FIX/blob/master/README-FIXES.md)
+Bardziej szczegółowe informacje o zmianach: [KLIK](https://github.com/ProcesorDEV/FunnyWeb-FIX/blob/master/README-FIXES.md)
 
 ### Zmiana ustawień sklepu oraz RCON
 * Wszystkie dostępne opcje znajdziesz w pliku config/conf_shop.php
