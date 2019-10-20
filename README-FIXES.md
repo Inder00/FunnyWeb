@@ -1,6 +1,9 @@
 # Wersja z poprawkami zawiera:
 
-## Wersja 2.0 AKTUALNA
+## Wersja 2.1 AKTUALNA
+  - dodanie statystyk serwera zintegrowanych z serwisem TopkaMC
+  - utworzenie WIKI oraz tablicy projektów
+## Wersja 2.0
   - dodanie dynmapy
   - naprawienie główek na stronie głównej (cz. 2)
   - przerobienie starego timelina na nowego
