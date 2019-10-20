@@ -8,7 +8,7 @@ Moja wersja zawiera:
 - wyświetlanie Dynmapy na stronie głównej
 
 ## Naprawiona wersja
-Bardziej szczegółowe informacje o zmianach: [KLIK](https://github.com/ProcesorDEV/FunnyWeb-FIX/blob/master/README-FIXES.md)
+Bardziej szczegółowe informacje o zmianach: [KLIK](https://github.com/ProcesorDEV/FunnyWeb/blob/master/README-FIXES.md)
 
 ### Zmiana ustawień sklepu oraz RCON
 * Wszystkie dostępne opcje znajdziesz w pliku config/conf_shop.php
