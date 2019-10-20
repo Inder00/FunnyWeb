@@ -6,14 +6,18 @@ $core->top();
 		<div class="container mb50">	
 			<div class="title-heading1 mb30">
 				<h3>MAPA SERWERA</h3>
-            </div>
+            <section id="mapa">
+				<div class="title-heading1 mb30">
+					<a href="#mapa"> <h3>MAPA SERWERA</h3> </a>
+				</div>
 
-			<iframe src="OTWORZ PLIK index.php I EDYTUJ TE LINIJKE" width="700" height="520" frameborder="0" marginheight="0" marginwidth="0" style="position:relative;Left:5.5cm;">Ustaw link w konfiguracji (jeżeli nie jesteś administratorem, możliwe że twoja przeglądarka nie działa prawidłowo)</iframe>
-			<div class="title-heading1 mb30">
-				<br> <br> <br>
-				
-				<h3>STATYSTYKI</h3>
-            </div>
+				<iframe src="WKLEJ TUTAJ SWOJ LINK DO DYNMAPY" width="700" height="520" frameborder="0" marginheight="0" marginwidth="0" style="position:relative;Left:5.5cm;">Ustaw link w konfiguracji (jeżeli nie jesteś administratorem, możliwe że twoja przeglądarka nie działa prawidłowo)</iframe>
+				<div class="title-heading1 mb30">
+					<br> <br> <br>
+					
+					<h3>STATYSTYKI</h3>
+				</div>
+			</section>
 			<div class="row mb30 no-margin">
 				<div class="col-sm-5 text-center">
 					<h3><span>TOP 10 GRACZY</span></h3>
