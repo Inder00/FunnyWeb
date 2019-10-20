@@ -1,12 +1,11 @@
 ﻿<?php
 require_once('application/core.php');
 $core->top();
-
 		echo $core->includediv(); ?>
 		<div class="container mb50">	
 			<div class="title-heading1 mb30">
 				<h3>MAPA SERWERA</h3>
-            <section id="mapa">
+            		<section id="mapa">
 				<div class="title-heading1 mb30">
 					<a href="#mapa"> <h3>MAPA SERWERA</h3> </a>
 				</div>
