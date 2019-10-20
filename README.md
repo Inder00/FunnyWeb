@@ -3,9 +3,10 @@ Strona www, służąca do wyświetlania informacji z pluginu FunnyGuilds i nie t
 
 ## Czym różni się mój fork od oryginału?
 Moja wersja zawiera:
+- wyświetlanie statystyk serwera **NA ŻYWO**
+- wyświetlanie Dynmapy na stronie głównej
 - naprawione główki graczy (na wszystkich stronach)
 - naprawiony tekst na stronie głównej
-- wyświetlanie Dynmapy na stronie głównej
 
 ## Naprawiona wersja
 Bardziej szczegółowe informacje o zmianach: [KLIK](https://github.com/ProcesorDEV/FunnyWeb/blob/master/README-FIXES.md)
