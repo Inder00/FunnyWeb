@@ -215,7 +215,7 @@ $webDescription="Najlepszy polski serwer";
 $webDescriptionSecond="Wojna trwa! Zbierz drużynę i ruszaj na spotkanie przygody";
 $serverIp="SERWER.PL";
 $webUrl="'.$base_url.'";
-$background="//i.imgur.com/THhxnVu.jpg";
+$background="//i.imgur.com/byShGIB.jpg";
 $logo="'.$logo.'";
 $favicon="'.$base_url.'assets/favicon.ico";
 ?>';
