@@ -1,8 +1,8 @@
 # FunnyWeb
 Strona www, służąca do wyświetlania informacji z pluginu FunnyGuilds i nie tylko...
 ## Wersje:
-### Aktualna: 2.1
-### INDEV: 2.2
+Aktualna: 2.2
+Beta (Indev): 2.3
 
 ## Czym różni się mój fork od oryginału?
 Moja wersja zawiera:
