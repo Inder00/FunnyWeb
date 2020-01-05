@@ -1,5 +1,8 @@
 # Wersja z poprawkami zawiera:
 
+## Wersja 2.2 [INDEV]
+  - integracja z pluginem IslandWorld
+  - napisanie instrukcji dot. integracji
 ## Wersja 2.1 AKTUALNA
   - dodanie statystyk serwera zintegrowanych z serwisem TopkaMC
   - utworzenie WIKI oraz tablicy projektów
