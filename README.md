@@ -3,7 +3,10 @@ Strona www, służąca do wyświetlania informacji z pluginu FunnyGuilds i nie t
 ## Wersje:
 Aktualna: 2.1
 
-Beta (Indev): 2.2
+## Informacje o następnej aktualizacji:
+Niedługo pojawi się nowy update, a w nim:
+- zastąpienie statystyk TopkaMC autorskim rozwiązaniem
+- aktualizacja konfiguracji
 
 ## Czym różni się mój fork od oryginału?
 Moja wersja zawiera:
