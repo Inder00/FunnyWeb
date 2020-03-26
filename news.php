@@ -31,7 +31,7 @@ $core->top();
                     <p><?php echo $news->format($aktualnosc['text']); ?></p>
                     <ul class="post-meta list-inline">
                         <li class="list-inline-item">
-                            <img src="https://crafatar.com/avatars/<?php echo $aktualnosc['username']; ?>?size=16"> <?php echo $news->format($aktualnosc['username']); ?>
+                            <img src="hhttps://minotar.net/avatar/<?php echo $aktualnosc['username']; ?>?size=16"> <?php echo $news->format($aktualnosc['username']); ?>
                         </li>
                         <li class="list-inline-item">
                             <i class="fa fa-calendar-o"></i> <?php echo date("m.d.Y H:i", $aktualnosc['date']); ?>

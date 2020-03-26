@@ -1,12 +1,22 @@
-<?php
+﻿<?php
 require_once('application/core.php');
 $core->top();
-
 		echo $core->includediv(); ?>
-		<div class="container mb50">
+		<div class="container mb50">	
 			<div class="title-heading1 mb30">
-				<h3>STATYSTYKI</h3>
-            </div>
+				<h3>MAPA SERWERA</h3>
+            		<section id="mapa">
+				<div class="title-heading1 mb30">
+					<a href="#mapa"> <h3>MAPA SERWERA</h3> </a>
+				</div>
+
+				<iframe src="WKLEJ TUTAJ SWOJ LINK DO DYNMAPY" width="700" height="520" frameborder="0" marginheight="0" marginwidth="0" style="position:relative;Left:5.5cm;">Ustaw link w konfiguracji (jeżeli nie jesteś administratorem, możliwe że twoja przeglądarka nie działa prawidłowo)</iframe>
+				<div class="title-heading1 mb30">
+					<br> <br> <br>
+					
+					<h3>STATYSTYKI</h3>
+				</div>
+			</section>
 			<div class="row mb30 no-margin">
 				<div class="col-sm-5 text-center">
 					<h3><span>TOP 10 GRACZY</span></h3>
@@ -32,7 +42,7 @@ $core->top();
 									<th style="width:25px;" class="black-text" scope="row"><?php echo $id; ?></th>
 									<td class="gracz">
 										<a class="black-text" href="<?php echo $core->webUrl; ?>gracz/<?php echo $gracz['name']; ?>">
-											<img src="https://crafatar.com/avatars/<?php echo $gracz['name']; ?>?size=25">
+											<img src="https://minotar.net/avatar/<?php echo $gracz['name']; ?>?size=25">
 											<p class="black-text"><?php echo $gracz['name']; ?></p>
 										</a>
 									</td>
@@ -53,7 +63,7 @@ $core->top();
 									<th style="width:25px;" class="black-text" scope="row"><?php echo $i; ?></th>
 									<td class="gracz">
 										<a class="black-text" href="#">
-											<img src="https://crafatar.com/avatars/Steve?size=25">
+											<img src="https://minotar.net/avatar/Steve">
 											<p class="black-text">Brak</p>
 										</a>
 									</td>
@@ -88,7 +98,7 @@ $core->top();
 									<th style="width:25px;" class="black-text" scope="row"><?php echo $id2; ?></th>
 									<td class="gracz">
 										<a class="black-text" href="<?php echo $core->webUrl; ?>gildia/<?php echo $gildia['tag']; ?>">
-											<img src="https://crafatar.com/avatars/<?php echo $gildia['owner']; ?>?size=25">
+											<img src="https://minotar.net/avatar/<?php echo $gildia['owner']; ?>?size=25">
 											<p class="black-text">[<?php echo $gildia['tag']; ?>] <?php echo $gildia['name']; ?></p>
 										</a>
 									</td>
@@ -109,7 +119,7 @@ $core->top();
 									<th style="width:25px;" class="black-text" scope="row"><?php echo $i; ?></th>
 									<td class="gracz">
 										<a class="black-text" href="#">
-											<img src="https://crafatar.com/avatars/Steve?size=25">
+											<img src="https://minotar.net/avatar/Steve">
 											<p class="black-text">Brak</p>
 										</a>
 									</td>

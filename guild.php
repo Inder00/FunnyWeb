@@ -117,7 +117,7 @@ if(isset($_GET['name']) && !empty($_GET['name'])){
 		<div class="container mb5">
 			<div class="row mb50 no-margin">
 				<div class="col-md-3 gracz">
-					<h3><span><a href="<?php echo $core->webUrl; ?>gracz/<?php echo $g['owner']; ?>"><img src="https://crafatar.com/avatars/<?php echo $g['owner']; ?>?size=25"> <?php echo $g['owner']; ?></a></span></h3>
+					<h3><span><a href="<?php echo $core->webUrl; ?>gracz/<?php echo $g['owner']; ?>"><img src="https://minotar.net/avatar/<?php echo $g['owner']; ?>?size=25"> <?php echo $g['owner']; ?></a></span></h3>
 					<span>Założyciel</span>
 				</div>
 				<div class="col-md-3">
@@ -196,7 +196,7 @@ if(isset($_GET['name']) && !empty($_GET['name'])){
 				?>
 				<div class="col-md-3 text-center gracz">
 					<a href="<?php echo $core->webUrl.'gracz/'.$gracz; ?>">
-						<h3><span><img src="https://crafatar.com/avatars/<?php echo $gracz; ?>?size=64"></span></h3>
+						<h3><span><img src="https://minotar.net/avatar/<?php echo $gracz; ?>?size=64"></span></h3>
 						<strong style="font-size:14px;"><?php echo $gracz; ?></strong>
 					</a>
 				</div>

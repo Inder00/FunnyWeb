@@ -121,7 +121,7 @@ if(isset($_GET['name']) && !empty($_GET['name'])){
                 <div class="row">
                     <div class=" col-md-12">
 						<div class="col-md-6">
-							<h2 class="text-white"><img id="glowa_gracza" src="https://crafatar.com/renders/head/<?php echo $g['name']; ?>?size=512"></img> <?php echo '['.$gildia['tag'].'] '.$g['name']; ?></h2>
+							<h2 class="text-white"><img id="glowa_gracza" src="https://minotar.net/avatar/<?php echo $g['name']; ?>/75"></img> <?php echo '['.$gildia['tag'].'] '.$g['name']; ?></h2>
 						</div>
                     </div>
                 </div>

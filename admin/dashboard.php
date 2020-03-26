@@ -16,7 +16,7 @@ $core->top();
      <div class="row">
          <div class="col-lg-3 mb40">
              <div class="mb40">
-                 <h4 class="sidebar-title">Witaj, <img src="https://crafatar.com/avatars/<?php echo $user['username']; ?>?size=23"> <?php echo $user['username']; ?></h4>
+                 <h4 class="sidebar-title">Witaj, <img src="https://minotar.net/avatar/<?php echo $user['username']; ?>/23"> <?php echo $user['username']; ?></h4>
                  <ul class="list-unstyled categories">
                      <li><a href="<?php echo $core->webUrl; ?>admin/home">Strona główna</a></li>
                      <li><a href="<?php echo $core->webUrl; ?>admin/ustawienia">Ustawienia strony</a></li>
